@@ -1,0 +1,12 @@
+{% extends "base.html"%}
+## Variables
+
+{% set title = 'Your Dashboard' %}
+
+##
+
+{% block content %}
+    <p>Hello {{ user.given_name }} {{ user.surname }}: {{ user.username }}!</p>
+    <p>Your email address is: {{ user.email }}.</p>
+    <p>Your favorite web framework is: {{ user.custom_data['favorite_web_framework'] }}.</p>
+{% endblock %}

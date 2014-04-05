@@ -1,0 +1,64 @@
+{% extends "base.html"%}
+## Variables
+
+{% set title = 'NPC Generator' %}
+
+##
+
+
+
+{% block content %}
+<a href="/"><h1 class="header NPCtitle">{{ title }}</h1></a>
+<button class="boton" ></button>
+<div class="dataContainer ">
+	<img src="{{url_for('static', filename='assets/ico_personajegenerado.png')}}" alt="" class="helm">
+	<div class="subtitle"></div>
+	<div class="inputs">
+		<label for="nombre"  class="labelNPC nombre">Nombre</label>
+		<input type="text" placeholder="no es requisito" name="nombre" id="nombre">
+		<label for="edad"   class="labelNPC edad">Edad</label>
+		<input type="number" value="30" min="13" max="110"size="4" placeholder="40" name="edad" id="edad">
+		<label  class="labelNPC genero">Género</label>
+		<label class="labelNPC genero" for="hombre">Hombre</label>
+		<input type="radio" value="hombre" name="genero" id="hombre" >
+		<label class="labelNPC genero" for="mujer">Mujer</label>
+		<input type="radio" value="mujer" name="genero" id="mujer" >
+	</div>
+	<div  id="rasgos">
+		<img class="categoriaLogo" src="{{url_for('static', filename='assets/ico_categorias_contenidos.png')}}" alt="logo">
+		<h2 class="rasgos">Rasgos</h2>
+		<p class="rasgosContainer"></p>
+	</div>
+	<div id="eventos">
+		<img class="categoriaLogo" src="{{url_for('static', filename='assets/ico_categorias_contenidos.png')}}" alt="logo">
+		<h3 class="eventos">Eventos</h3>
+		<p class="eventosContainer"></p>
+	</div>
+	<div id="religion">
+		<img class="categoriaLogo" src="{{url_for('static', filename='assets/ico_categorias_contenidos.png')}}" alt="logo">
+		<h3 class="religion">Religion</h3>
+		<p class="religionContainer"></p>
+	</div>
+	<div id="familia">
+		<img class="categoriaLogo" src="{{url_for('static', filename='assets/ico_categorias_contenidos.png')}}" alt="logo">
+		<h3 class="famlilia">Familia</h3>
+		<h4 class="pareja">Relación amorosa</h4>
+		<p class="parejaContainer"></p>
+		<h4 class="hermanos">Familiares</h4>
+		<p class="hermanosContainer"></p>
+		<h4 class="hijos">Descendencia</h4>
+		<p class="hijosContainer"></p>
+		<h4 class="lejanos">Parientes Lejanos o Segundos</h4>
+		<p class="lejanosContainer"></p>
+	</div>
+</div>
+{% endblock %}
+
+	
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/functions.js')}}"></script>
+<script src="{{ url_for('static', filename='js/NPCgenerator.js')}}"></script>
+{% endblock %}
+</body>
+</html>

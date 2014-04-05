@@ -1,0 +1,22 @@
+{% extends "base.html"%}
+## Variables
+
+{% set title = 'Login' %}
+
+##
+
+{%block content %}
+    {% if error %}
+      <p>{{ error }}</p>
+    {% endif %}
+    <form action="" method="post">
+      <fieldset>
+        <legend>Login</legend>
+        <label for="email">Email</label>
+        <input type="email" name="email" placeholder="Email">
+        <label for="password">Password</label>
+        <input type="password" name="password" placeholder="Password">
+        <input type="submit" name="Login">
+      </fieldset>
+    </form>
+{% endblock %}

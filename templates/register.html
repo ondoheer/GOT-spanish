@@ -1,0 +1,30 @@
+{% extends "base.html"%}
+## Variables
+
+{% set title = 'Register' %}
+
+##
+
+{%block content %}
+
+    {% if error %}
+      <p>{{ error }}</p>
+    {% endif %}
+    <form action="" method="post">
+      <fieldset>
+        <legend>Create an Account</legend>
+        <label for="user">User</label>
+        <input type="text" name="user" placeholder="User">
+        <label for="first-name">First Name</label>
+        <input type="text" name="first-name" placeholder="First Name">
+        <label for="last-name">Last Name</label>
+        <input type="text" name="last-name" placeholder="Last Name">
+        <label for="email">Email</label>
+        <input type="email" name="email" placeholder="Email">
+        <label for="password">Password</label>
+        <input type="password" name="password" placeholder="Password">
+        <input type="submit" name="Register">
+      </fieldset>
+    </form>
+
+{% endblock %}

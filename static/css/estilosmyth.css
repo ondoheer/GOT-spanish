@@ -1,0 +1,326 @@
+/* Reset bamba */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*****************
+ELEMENTOS COMUNES 
+*****************/
+
+body {
+  background: #150904;
+  background: url('../assets/bg_web_main.jpg')no-repeat #150904 scroll center top;
+  /*background-position:50% 50%; 
+	background-size:cover;*/
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  display: block;
+  float: left;
+  clear: right;
+  color: #cecece;
+  margin: 20px 0 15px 15px;
+}
+
+h2,
+h3 {
+  font-size: 1.525em;
+}
+
+h2,
+h3,
+h4 {
+  font-family: garamond;
+  text-transform: uppercase;
+}
+
+h4 {
+  margin-top: 15px;
+  clear: both;
+}
+
+div {
+  display: block;
+  float: left;
+  clear: both;
+}
+
+span {
+  float: left;
+  display: inline-block;
+  margin-left: 10px;
+  color: #eee;
+  letter-spacing: 0.8px;
+}
+
+#header {
+  float: left;
+  width: 100%;
+  background: #000;
+  opacity: 0.7;
+}
+
+#userLogin {
+  float: right;
+  color: #fff;
+}
+
+.header {
+  display: block;
+  width: 960px;
+  height: 150px;
+  text-indent: -9999px;
+  margin: 0 0 0 -1px;
+}
+
+.mainContainer {
+  display: block;
+  width: 100%;
+  float: left;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+.wrapper {
+  width: 960px;
+  display: block;
+  margin: 0px auto;
+  float: none;
+}
+
+.boton {
+  display: block;
+  width: 200px;
+  margin: 20px 370px;
+  float: left;
+  clear: both;
+  height: 66px;
+  width: 206px;
+  background: url('../assets/btn_sprite_generarnpc.jpg');
+}
+
+.boton:hover {
+  background-position: 0px -66px;
+}
+
+.boton:active {
+  background-position: 0px -132px;
+}
+
+.boton:focus {
+  outline: none;
+}
+
+.dataContainer {
+  float: left;
+  width: 800px;
+  margin: 0 50px;
+  background: #212121;
+  border-color: #171717;
+  border-width: 30px;
+  border-image: url('../assets/border_bg_example2.png') 30 repeat;
+  -o-border-image: url('../assets/border_bg_example2.png') 30 repeat;
+  -webkit-border-image: url('../assets/border_bg_example2.png') 30 repeat;
+}
+
+/********************
+PÁGINA PRINCIPAL
+********************/
+
+.mainTitle {
+  background: url('../assets/header_bg_aplicaciones.jpg');
+}
+
+.mainMenu {
+  position: absolute;
+  top: 180px;
+}
+
+.sectionLink {
+  display: block;
+  width: 300px;
+  height: 90px;
+  position: relative;
+  top: 40px;
+  text-decoration: none;
+  background: #212121;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  padding: 20px;
+  font-size: 1.6em;
+  color: #fff;
+}
+
+.sectionLink:nth-child(odd) {
+  left: 150px;
+}
+
+.sectionLink:nth-child(even) {
+  left: 500px;
+  top: -50px;
+}
+
+.sectionLink:after {
+  color: orange;
+}
+
+.sectionLink p {
+  position: relative;
+  z-index: 3;
+  -webkit-transition: opacity 0.5s ease-in;
+  transition: opacity 0.5s ease-in;
+  opacity: 0;
+  font-size: 0.625em;
+  background: #000;
+  border: 2px solid #FFF;
+  margin-left: 100px;
+  margin-right: -100px;
+  padding: 7px;
+}
+
+.sectionLink li {
+  list-style: none;
+}
+
+.sectionLink:hover p {
+  opacity: 1;
+}
+
+/********************
+PAGINA NPC GENERATOR
+*********************/
+
+.NPCtitle {
+  background: url('../assets/header_bg.jpg');
+}
+
+.helm {
+  float: left;
+  margin-top: -80px;
+  margin-left: 50px;
+}
+
+.subtitle {
+  background: url('../assets/personajegenerado.png');
+  clear: none;
+  float: left;
+  margin: 20px auto;
+  height: 47px;
+  width: 437px;
+}
+
+.inputs {
+  float: left;
+}
+
+#edad {
+  margin: -1px 5px 0 5px;
+  width: 40px;
+}
+
+.minAge,
+.maxAge,
+input,
+label {
+  float: left;
+}
+
+.labelNPC {
+  color: #fafafa;
+  margin-right: 5px;
+  margin-left: 10px;
+}
+
+.nombreRasgo {
+  float: left;
+  clear: left;
+  color: white;
+  font-weight: bold;
+  display: block;
+  margin-right: 5px;
+  margin-left: 40px;
+  width: 155px;
+  text-transform: uppercase;
+  font-size: 0.875em;
+}
+
+.toRemove {
+  width: 100%;
+}
+
+.removeElemment {
+  cursor: pointer;
+  background: #5C2E00;
+  color: #CC9900;
+  border-radius: 5px;
+  margin-right: 10px;
+  float: right;
+  font-size: 0.625em;
+  padding: 0 2px;
+}
+
+.religion {
+  width: 170px;
+  margin-bottom: 20px;
+}
+
+#rasgos,
+#religion,
+#eventos,
+#familia {
+  display: block;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  padding: 15px;
+  margin: 3px 0;
+  background: #000;
+  opacity: 0.8;
+}
+
+.categoriaLogo {
+  float: left;
+  clear: both;
+}
+
+/*****************
+HOUSE GENERATOR
+*****************/
+
+.houseLabel,
+.houseSelect,
+#submitHouses {
+  float: left;
+  clear: left;
+  margin: 4px 0;
+}
+
+.houseInput {
+  margin-left: 10px;
+}
+
+.houseLabel {
+  color: #fff;
+}
+
+.houseDataSection {
+  display: block;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  padding: 15px;
+  margin: 3px 0;
+  background: #000;
+  opacity: 0.8;
+  color: #fff;
+}

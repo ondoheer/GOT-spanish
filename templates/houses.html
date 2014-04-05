@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+## Variables
+
+{% set title = 'House Generator' %}
+
+##
+
+{% block content %}
+<a href="/"><h1 class="header mainTitle">{{ title }}</h1></a>
+<div class="dataContainer">			
+	<label class="houseLabel" for="houseName">Elige un nombre para la casa</label>
+	<input class="houseInput "type="text" name="houseName" placeholder="house Name" id="houseName">
+	<label class="houseLabel" for="realm">Elige un reino</label>
+	<select name="realm" class="houseSelect" id="selectRealm">
+		<option value="kingslanding">King's Landing</option>
+		<option value="dragonstone">Dragonstone</option>
+		<option value="theNorth">The North</option>
+		<option value="theIronIslands">The Iron Islands</option>
+		<option value="riverlands">The Riverlands</option>
+		<option value="mountainsOfTheMoon">The Mountains of the Moon</option>
+		<option value="westernlands">Westernlands</option>
+		<option value="theReach">The Reach</option>
+		<option value="theSotrmlands">The Sotrmlands</option>
+		<option value="dorne">Dorne</option>
+	</select>
+	<label class="houseLabel" for="houseSize">Selecciona el tamaño de la casa</label>
+	<select name="houseSize" id="houseSize" class="houseSelect">
+		<option value="small">pequeña (típica casa generada para jugadores)</option>
+		<option value="medium">mediana (casa con algúnos vasallos y algún territorio ejem: Connington)</option>
+		<option value="large">grande (casa típica de las famlias del libro: Pyne, Horpe, etc)</option>
+		<option value="famous">famosa (casa reconocida sin ser warden: Karstark, Bolton, etc</option>
+		<option value="warden">warden (guardianes del reino: Stark, Lannister, Tyrell, etc)</option>
+	</select>
+	<label class="houseLabel" for="founded">Edad de fundación de la casa</label>
+	<select name="founded" class="houseSelect" id="houseFoundation">
+		<option value="ancient">Ancient: Age of heroes</option>
+		<option value="veryOld">Very Old: Andal Invasion</option>
+		<option value="old">Old: Rohynar Invasion</option>
+		<option value="established">Established: Aegon's Conquest</option>
+		<option value="recent">Recent: Blackfire Rebellion</option>
+		<option value="new">New: War of the Usurper</option>
+		<option value="random">-- RANDOM --</option>
+	</select>
+
+	<button id="submitHouses" class="submitButton">Enviar</button>
+
+	<h2 class="houseDataTitle">House Stats</h2>
+
+	<div id="houseStats" class="houseDataSection">					
+	</div>
+	<h2 class="houseDataTitle">Historical Events</h2>
+	<div id="houseEvents" class="houseDataSection">					
+	</div>
+	<h2 class="houseDataTitle">Defense Holdings</h2>
+	<div id="defenseHoldings" class="houseDataSection"></div>
+	<h2 class="houseDataTitle">Influence Holdings</h2>
+	<div id="influenceHoldings" class="houseDataSection"></div>
+	<h2 class="houseDataTitle">Land Holdings</h2>
+	<div id="landHoldings" class="houseDataSection"></div>
+	<h2 class="houseDataTitle">Law Holdings</h2>
+	<div id="lawHoldings" class="houseDataSection"></div>
+	<h2 class="houseDataTitle">Population Holdings</h2>
+	<div id="populationHoldings" class="houseDataSection"></div>
+	<h2 class="houseDataTitle">Power Holdings</h2>
+	<div id="powerHoldings" class="houseDataSection"></div>
+	<h2 class="houseDataTitle">Wealth Holdings</h2>
+	<div id="wealthHoldings" class="houseDataSection"></div>
+</div>
+{% endblock %}
+		
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/HousesGenerator.js')}}"></script>
+{% endblock %}

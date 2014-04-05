@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+## Variables
+
+{% set title = 'Coding Westeros' %}
+
+##
+{% block content %}
+<a href="/"><h1 class="header mainTitle">{{ title }}</h1></a>
+			
+<menu class="mainMenu">
+	
+	<a href="/npc" id="npc" class="sectionLink">
+		
+		<li>Genera un NPC</li>
+		<p class="menuTooltip">Genera el background de un personaje, segun su genero y edad, solo genera datos sobre su historia para utilizar según convengan</p>
+	</a>
+	<a href="/houses" id="houses" class="sectionLink">
+		<li>Genera una Casa</li>
+		<p class="menuTooltip">Genera todos los datos de una casa Aleatoriamente, sus Stats, territorio y valores.</p>
+	</a>
+	<a href="/store" id="store" class="sectionLink">
+		<li>Calcula el costo de comprar items</li>
+		<p class="menuTooltip">Pasate por una tienda online de items de Westeros al mejor precio!</p>
+	</a>
+	<a href="/other" id="other" class="sectionLink">
+		<li>Otro</li>
+		<p class="menuTooltip"></p>
+	</a>
+</menu>
+
+{% endblock %}
